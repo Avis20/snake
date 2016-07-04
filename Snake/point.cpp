@@ -1,8 +1,10 @@
 #include "point.h"
 
-Point::Point()
+Point::Point(int _x, int _y, char _sym)
 {
-
+    x = _x;
+    y = _y;
+    sym = _sym;
 }
 
 void Point::Draw(){

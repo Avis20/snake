@@ -12,7 +12,7 @@ public:
     int y;
     char sym;
 public:
-    Point();
+    Point(int, int, char);
     void Draw();
     void gotoxy(int x, int y);
 };
