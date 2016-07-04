@@ -1,22 +1,35 @@
 #include <QCoreApplication>
 #include "point.h"
 #include "horizontalline.h"
+#include "verticalline.h"
+#include <windows.h>
 
-void gotoxy(int, int);
-void Draw(int, int, char);
+void setWindow();
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    Point p1(1, 3, '*');
+    setWindow();
+
+    //Рисуем рамочку
+    HorizontalLine upLine(0, 78, 0, '+');
+    HorizontalLine downLine(0, 78, 24, '+');
+    VerticalLine leftLine(0, 24, 0, '+');
+    VerticalLine rightLine(0, 24, 78, '+');
+    upLine.Draw();
+    downLine.Draw();
+    leftLine.Draw();
+    rightLine.Draw();
+
+    Point p1(5, 3, '*');
     p1.Draw();
 
-    Point p2(4, 5, '#');
-    p2.Draw();
-
-    HorizontalLine p(5, 10, 3, '+');
-    p.Draw();
-
     return a.exec();
+}
+
+void setWindow(){
+    HANDLE hWnd = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD bufferSize = {80, 25};
+    SetConsoleScreenBufferSize(hWnd, bufferSize);
 }

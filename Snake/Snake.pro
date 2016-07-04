@@ -9,9 +9,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     point.cpp \
-    horizontalline.cpp
+    horizontalline.cpp \
+    verticalline.cpp
 
 HEADERS += \
     point.h \
-    horizontalline.h
+    horizontalline.h \
+    verticalline.h
 
