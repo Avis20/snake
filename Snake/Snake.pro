@@ -2,14 +2,16 @@ QT += core
 QT -= gui
 
 TARGET = Snake
-CONFIG += console
+CONFIG += console c++11
 CONFIG -= app_bundle
 
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    point.cpp
+    point.cpp \
+    horizontalline.cpp
 
 HEADERS += \
-    point.h
+    point.h \
+    horizontalline.h
 
