@@ -1,8 +1,5 @@
 #include <QCoreApplication>
-#include <iostream>
-#include <windows.h>
-
-using namespace std;
+#include "point.h"
 
 void gotoxy(int, int);
 void Draw(int, int, char);
@@ -10,27 +7,19 @@ void Draw(int, int, char);
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    int x1 = 1, y1 = 3;
-    char sym1 = '*';
 
-    Draw(x1,y1,sym1);
+    Point p1;
+    p1.x = 1;
+    p1.y = 3;
+    p1.sym = '*';
+    p1.Draw();
 
-    int x2 = 4, y2 = 5;
-    char sym2 = '#';
 
-    Draw(x2,y2,sym2);
+    Point p2;
+    p2.x = 4;
+    p2.y = 5;
+    p2.sym = '#';
+    p2.Draw();
 
     return a.exec();
-}
-
-void Draw(int x, int y, char sym){
-    gotoxy(x,y);
-    cout << sym;
-}
-
-void gotoxy(int x, int y){
-    COORD coord;
-    coord.X = x;
-    coord.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
