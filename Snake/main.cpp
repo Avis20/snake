@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
     snake.Draw();
     snake.Move();
 
-
     return a.exec();
 }
 
