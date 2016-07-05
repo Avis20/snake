@@ -10,10 +10,12 @@ TEMPLATE = app
 SOURCES += main.cpp \
     point.cpp \
     horizontalline.cpp \
-    verticalline.cpp
+    verticalline.cpp \
+    figure.cpp
 
 HEADERS += \
     point.h \
     horizontalline.h \
-    verticalline.h
+    verticalline.h \
+    figure.h
 

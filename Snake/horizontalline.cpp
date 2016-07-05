@@ -7,10 +7,3 @@ HorizontalLine::HorizontalLine(int xLeft, int xRight, int y, char sym)
         pList.push_back(p);
     }
 }
-
-void HorizontalLine::Draw(){
-    for (auto p : pList){
-        p.Draw();
-    }
-}
-

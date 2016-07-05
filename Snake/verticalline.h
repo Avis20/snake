@@ -1,14 +1,12 @@
 #ifndef VERTICALLINE_H
 #define VERTICALLINE_H
 #include "point.h"
-#include <list>
+#include "figure.h"
 
-class VerticalLine
+class VerticalLine : public Figure
 {
 public:
-    list<Point> pList;
     VerticalLine(int, int, int, char);
-    void Draw();
 };
 
 #endif // VERTICALLINE_H

@@ -1,14 +1,12 @@
 #ifndef HORIZONTALLINE_H
 #define HORIZONTALLINE_H
 #include "point.h"
-#include <list>
+#include "figure.h"
 
-class HorizontalLine
+class HorizontalLine : public Figure
 {
 public:
-    list<Point> pList;
     HorizontalLine(int, int, int, char);
-    void Draw();
 };
 
 #endif // HORIZONTALLINE_H

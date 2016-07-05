@@ -7,11 +7,3 @@ VerticalLine::VerticalLine(int yUp, int yDown, int x, char sym)
         pList.push_back(p);
     }
 }
-
-void VerticalLine::Draw(){
-    for (auto p : pList){
-        p.Draw();
-    }
-}
-
-
