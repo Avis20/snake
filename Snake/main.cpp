@@ -5,6 +5,7 @@
 #include "snake.h"
 #include "direction.h"
 #include <windows.h>
+#include <conio.h>
 
 void setWindow();
 
@@ -26,8 +27,9 @@ int main(int argc, char *argv[])
 
     Point p1(4, 5, '*');
     p1.Draw();
-    Snake snake(p1, 10, RIGHT);
+    Snake snake(p1, 4, RIGHT);
     snake.Draw();
+    snake.Move();
 
 
     return a.exec();

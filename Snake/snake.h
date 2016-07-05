@@ -7,7 +7,10 @@
 class Snake: public Figure
 {
 public:
+    Direction direction;
     Snake(Point, int, Direction);
+    void Move();
+    Point GetNextPoint();
 };
 
 #endif // SNAKE_H

@@ -18,6 +18,7 @@ public:
     void Draw();
     void gotoxy(int x, int y);
     void Move(int, Direction);
+    void Clear();
 };
 
 #endif // POINT_H

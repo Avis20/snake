@@ -24,6 +24,10 @@ void Point::Move(int offset, Direction direction){
         y -= offset;
 }
 
+void Point::Clear(){
+    sym = ' ';
+    Draw();
+}
 
 void Point::Draw(){
     gotoxy(x,y);
