@@ -29,7 +29,6 @@ int main(int argc, char *argv[])
     Snake snake(p1, 10, RIGHT);
     snake.Draw();
 
-
     return a.exec();
 }
 
