@@ -2,6 +2,8 @@
 #include "point.h"
 #include "horizontalline.h"
 #include "verticalline.h"
+#include "snake.h"
+#include "direction.h"
 #include <windows.h>
 
 void setWindow();
@@ -22,8 +24,11 @@ int main(int argc, char *argv[])
     leftLine.Draw();
     rightLine.Draw();
 
-    Point p1(5, 3, '*');
+    Point p1(4, 5, '*');
     p1.Draw();
+    Snake snake(p1, 10, RIGHT);
+    snake.Draw();
+
 
     return a.exec();
 }

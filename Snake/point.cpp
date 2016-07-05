@@ -7,6 +7,24 @@ Point::Point(int _x, int _y, char _sym)
     sym = _sym;
 }
 
+Point::Point(const Point &p){
+    x = p.x;
+    y = p.y;
+    sym = p.sym;
+}
+
+void Point::Move(int offset, Direction direction){
+    if (direction == RIGHT)
+        x += offset;
+    else if (direction == LEFT)
+        x -= offset;
+    else if (direction == UP)
+        y += offset;
+    else if (direction == DOWN)
+        y -= offset;
+}
+
+
 void Point::Draw(){
     gotoxy(x,y);
     cout << sym;

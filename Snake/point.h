@@ -2,6 +2,7 @@
 #define POINT_H
 #include <iostream>
 #include <windows.h>
+#include "direction.h"
 
 using namespace std;
 
@@ -13,8 +14,10 @@ public:
     char sym;
 public:
     Point(int, int, char);
+    Point(const Point &);
     void Draw();
     void gotoxy(int x, int y);
+    void Move(int, Direction);
 };
 
 #endif // POINT_H

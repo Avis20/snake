@@ -11,11 +11,14 @@ SOURCES += main.cpp \
     point.cpp \
     horizontalline.cpp \
     verticalline.cpp \
-    figure.cpp
+    figure.cpp \
+    snake.cpp
 
 HEADERS += \
     point.h \
     horizontalline.h \
     verticalline.h \
-    figure.h
+    figure.h \
+    snake.h \
+    direction.h
 
